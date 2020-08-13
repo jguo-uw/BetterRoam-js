@@ -1,0 +1,151 @@
+/* Split Screen CSS for Roam                 */
+/* "Assembled" and tweaked by @DavidCrandall */
+/* https://davidcrandallwrites.com           */
+
+
+/* ------------------- Main block ------------------- */
+/* remove centering */
+.roam-center {
+    --align-item: left;
+    flex-basis: 40% !important;
+    /* sidevar wider */
+    max-width: 100% !important;
+}
+.rm-block-text {
+    max-width: 100%;
+}
+
+
+/* ------------------- Align checkboxes better ------------------- */
+/* Add space after all checkbox */
+.rm-block-text label.check-container {
+    margin-right: 3px;
+}
+
+/* align checkboxes in zoomed-in headings */
+.rm-level1 label.check-container {
+    margin-bottom: 14px;
+}
+
+.rm-level2 label.check-container {
+    margin-bottom: 14px;
+}
+
+.rm-level3 label.check-container {
+    margin-bottom: 12px;
+}
+
+/* align checkboxes in table */
+.roam-table label.check-container {
+    margin-bottom: 18px;
+}
+
+/* don't need "SHORTCUTS" heading */
+.starred-pages-wrapper>.flex-h-box {
+    display: none;
+}
+
+.starred-pages-wrapper>div:nth-child(-n + 2) {
+    margin: 0 -12px;
+    display: none;
+}
+
+
+/* ------------------- More subtle logo ------------------- */
+#roam-sidebar-logo img {
+    opacity: 0.4;
+    width: 15%;
+}
+
+#roam-sidebar-logo span {
+    display: none;
+}
+
+
+/* ------------------- Sidebar ----------------- */
+/* sidebar sections margin */
+#roam-right-sidebar-content>div {
+    margin: 0 !important;
+    padding: 10px 42px 10px 42px;
+}
+
+/* sidebar section headings align */
+#roam-right-sidebar-content>div>div:first-child {
+    margin-left: -10px;
+}
+
+
+/* sidebar width */
+#right-sidebar .hoverparent,
+#right-sidebar .react-resizable,
+#right-sidebar textarea {
+    margin-right: 48px !important;
+    max-width: 80%;
+}
+
+
+/* ------------------ Crumbs ----------------- */
+
+.rm-zoom div span:not(.bp3-icon-chevron-right) {
+    font-size: 12px;
+    line-height: 1.3;
+    color: #bbb !important;
+    --max-width: 1000px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px !important;
+}
+
+.rm-zoom div span:not(.bp3-icon-chevron-right):hover,
+.parent-path-wrapper div span:not(.bp3-icon-chevron-right):hover {
+    color: black !important;
+}
+
+.rm-zoom .rm-page-ref {
+    background: transparent !important;
+}
+
+.rm-zoom .bp3-icon-chevron-right,
+.rm-zoom .bp3-icon-chevron-right {
+    font-size: 1em;
+    margin: 0 3px;
+    color: #ddd !important;
+}
+
+.rm-zoom label.check-container {
+    display: none;
+}
+
+.rm-reference-main .flex-h-box {
+    min-height: 30px;
+}
+
+/* Smaller & darker reference title */
+.rm-reference-main strong {
+    color: #666;
+    font-size: 0.8em;
+    --background-color: rgba(216, 225, 232, 0.3);
+}
+
+
+/* slightly bigger page headings under referenced items */
+.rm-reference-main .rm-level3 {
+    font-size: 1.6em;
+}
+
+/* ------------------- Longer search bar ------------------- */
+.rm-find-or-create-wrapper {
+    flex: 0 1 100% !important;
+}
+
+.rm-find-or-create-wrapper .bp3-input {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.roam-topbar>div>.bp3-popover-wrapper:first-of-type .bp3-tooltip {
+    width: 200px;
+    position: absolute;
+
+}

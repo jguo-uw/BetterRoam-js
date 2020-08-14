@@ -49,4 +49,3 @@ function addSortArrow(){
         });
     })
 };
-setInterval(addSortArrow, 100);

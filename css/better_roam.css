@@ -545,3 +545,35 @@ select {
 .rm-emoji-block-view .rm-emoji-button {
     height: unset;
 }
+
+/* ------------------- Kanban ------------------- */
+.kanban-board{
+	--background:  #E4EDF2;
+	--card-shadow: #9EB3C0
+}
+.kanban-board {
+    background-color: var(--body-background-color);
+}
+
+.kanban-card {
+    background-color: var(--body-background-color);
+    margin: 8px 5px;
+    box-shadow: 1px 1px 2px var(--card-shadow);
+    padding: 10px;
+    border-radius: 3px;
+    line-height: 1.3em;
+}
+
+.kanban-title {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 6px;
+}
+
+.kanban-column {
+    background-color: var(--background);
+    margin: 0px 4px 0px 4px;
+    padding: 4px;
+    min-width: 240px;
+    border-radius: 6px;
+}

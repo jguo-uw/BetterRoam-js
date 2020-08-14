@@ -237,7 +237,10 @@ h3 textarea {
 .rm-pages-row,
 .rm-pages-title-col {
     color: var(--header-color) !important;
-    flex: 1 0 15%;
+}
+
+.rm-all-pages .table .rm-pages-row .rm-pages-col{
+    flex: 0 0 200px !important;
 }
 
 .rm-all-pages .table .rm-pages-row.rm-pages-row-header {

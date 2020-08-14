@@ -12,8 +12,8 @@ function pomoAddTag(pomodoro){
 }
 
 function SoundTrigger(pomodoro){
-    const restURL = 'https://raw.githubusercontent.com/jguo-uw/BetterRoam-js/dev/audio/TimeToRest.mp3';
-    const completeURL = 'https://raw.githubusercontent.com/jguo-uw/BetterRoam-js/dev/audio/YouDidIt.mp3';
+    const restURL = URLScriptServer + '/audio/TimeToRest.mp3';
+    const completeURL = URLScriptServer + '/audio/YouDidIt.mp3';
     let sec = pomodoro.getAttribute('data-pom-seconds');
     let min = pomodoro.getAttribute('data-pom-minutes');
     if (sec==0 && min == 25) {

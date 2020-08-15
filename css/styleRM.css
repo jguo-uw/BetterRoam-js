@@ -1,8 +1,20 @@
 .toast-info {
-    background-color: white !important;
-    color: black !important;
-    opacity: 0.9 !important;
+    background-color: var(--header-color) !important;
+    color: white !important;
+    opacity: 0.8 !important;
+    background-image: none !important;
 }
+
+#toast-container>div{
+    background-position: 15px 15px;
+    width:fit-content;
+}
+
+.toast-message table td{
+    font-size:14px !important;
+    min-width: 15px;
+}
+
 
 #dnapopup {
     visibility:hidden;
@@ -34,15 +46,6 @@
     width:100%;
 }
 
-#rmSearch {
-    position: absolute;
-    display: none;
-    z-index: 1000;
-    position: fixed;
-    top: 60px;
-    right: -10%;
-    transform: translate(-50%, -50%);
-}
 
 
 .th-source {
@@ -97,13 +100,6 @@
     outline: none;
 }
 
-.typeahead {
-    background-color: #fff;
-}
-
-.typeahead:focus {
-    border: 3px solid #0097cf;
-}
 
 .tt-query {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);

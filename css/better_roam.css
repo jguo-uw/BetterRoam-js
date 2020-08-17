@@ -375,8 +375,7 @@ a:hover {
 /* ------------------- Block Refs ------------------- */
 /* leading color */
 .rm-block-ref::before {
-    content: '';
-    display: inline-block;
+    content: ' ';
     width: 3px;
     border-radius: 1px;
     height: 1.2em;

@@ -36,11 +36,11 @@ function addSortArrow(){
             event.preventDefault();
             event.stopPropagation();
             if (toggleEl.innerHTML.startsWith('▼')) {
-            sortTable(table, index);
-            toggleEl.innerHTML = '▲&nbsp;';
+                sortTable(table, index);
+                toggleEl.innerHTML = '▲&nbsp;';
             } else {
-            sortTable(table, index, true);
-            toggleEl.innerHTML = '▼&nbsp;';
+                sortTable(table, index, true);
+                toggleEl.innerHTML = '▼&nbsp;';
             }
         }
         if (head.firstChild.id != 'sortArrow'){
@@ -49,3 +49,5 @@ function addSortArrow(){
         });
     })
 };
+
+setInterval(addSortArrow, 100);

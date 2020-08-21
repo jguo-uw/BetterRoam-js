@@ -27,7 +27,7 @@ function addSortArrow(){
     document.querySelectorAll('.roam-table > table').forEach(table => {
         table.querySelectorAll('thead th').forEach((head, index) => {
         const toggleEl = document.createElement('span');
-        toggleEl.innerHTML = '&#9660;&nbsp;';
+        toggleEl.innerHTML = '▼&nbsp;';
         toggleEl.style.color = '#A9A9A9';
         toggleEl.style.cursor = 'pointer';
         toggleEl.style.fontsize = '70%';
@@ -35,12 +35,12 @@ function addSortArrow(){
         toggleEl.onclick = event => {
             event.preventDefault();
             event.stopPropagation();
-            if (toggleEl.innerHTML.startsWith('&#9660;')) {
-            sortTable(table, index);
-            toggleEl.innerHTML = '&#9650;&nbsp;';
+            if (toggleEl.innerHTML.startsWith('▼')) {
+                sortTable(table, index);
+                toggleEl.innerHTML = '▲&nbsp;';
             } else {
-            sortTable(table, index, true);
-            toggleEl.innerHTML = '&#9660;&nbsp;';
+                sortTable(table, index, true);
+                toggleEl.innerHTML = '▼&nbsp;';
             }
         }
         if (head.firstChild.id != 'sortArrow'){

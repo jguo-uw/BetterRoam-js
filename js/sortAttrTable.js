@@ -50,4 +50,12 @@ function addSortArrow(){
     })
 };
 
+document.querySelectorAll('.roam-table > table > tbody td').forEach(td =>{
+    td.querySelectorAll('div > span > div > span:nth-child(2)').forEach(span => {
+        span.remove()
+    });
+});
+        
+
+
 setInterval(addSortArrow, 100);

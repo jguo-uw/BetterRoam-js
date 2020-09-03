@@ -49,13 +49,13 @@ function addSortArrow(){
         });
     })
 };
-
-document.querySelectorAll('.roam-table > table > tbody td').forEach(td =>{
-    td.querySelectorAll('div > span > div > span:nth-child(2)').forEach(span => {
-        span.remove()
+function removeBackground(){
+    document.querySelectorAll('.roam-table > table > tbody td').forEach(td =>{
+        td.querySelectorAll('div > span > div > span:nth-child(2)').forEach(span => {
+            span.remove();
+        });
     });
-});
-        
+}
 
-
+setInterval(removeBackground, 100);
 setInterval(addSortArrow, 100);

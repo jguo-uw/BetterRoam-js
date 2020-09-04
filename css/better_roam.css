@@ -461,12 +461,17 @@ a:hover {
     background: var(--main-background-color) !important;
 }
 
+.rm-query-title{
+    color: var(--color-primary) !important;
+    font-size: 12px !important;
+}
+
 .rm-reference-main .rm-query-content {
     padding: 0;
 }
 
 .rm-query .rm-reference-main .rm-reference-item .controls {
-    margin-left: -1em;
+    margin-left: -0.5em;
 }
 
 .rm-ref-page-view {

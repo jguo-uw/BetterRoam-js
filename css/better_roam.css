@@ -461,11 +461,7 @@ a:hover {
     background: var(--main-background-color) !important;
 }
 
-.rm-query-title {
-    display: none;
-}
-
-.rm-reference-main.rm-query-content {
+.rm-reference-main .rm-query-content {
     padding: 0;
 }
 

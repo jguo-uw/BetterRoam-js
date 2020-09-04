@@ -455,6 +455,7 @@ a:hover {
 .rm-query {
     border: 0.5px solid #e4e9ec;
     border-radius: 5px;
+    background-color: var(--main-background-color) !important;
 }
 
 .rm-query-content {

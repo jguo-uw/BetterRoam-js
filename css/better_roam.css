@@ -1,27 +1,14 @@
 :root {
     --header-font: 'Open Sans', 'DengXian', sans-serif;
     --body-font: 'Inter', 'DengXian', sans-serif;
-
-    --header-color: #475272
-        /*43506c*/
-    ;
-    --bullet-color: hsl(174, 40%, 52%)
-        /*70afce*/
-    ;
-
-    --color-primary: rgb(104, 163, 157)
-        /*1882b8*/
-    ;
-    --color-primary-highlight: rgb(188, 218, 211)
-        /* hsl(195,55%,80%)*/
-    ;
+    --header-color: #475272   /*43506c*/;
+    --bullet-color: hsl(174, 40%, 52%)   /*70afce*/;
+    --color-primary: rgb(104, 163, 157)  /*1882b8*/;
+    --color-primary-highlight: rgb(188, 218, 211)  /* hsl(195,55%,80%)*/;
     --color-primary-contrast: #ffffff;
-    --color-secondary: rgb(195, 161, 116)
-        /*FF5722*/
-    ;
+    --color-secondary: rgb(195, 161, 116)   /*FF5722*/;
     --color-secondary-highlight: rgb(255, 214, 153);
     --color-secondary-contrast: #ffffff;
-
     --light-background-color: rgba(188, 218, 211, .5);
 }
 
@@ -37,6 +24,8 @@
     --brackets-color: rgba(0, 0, 0, 0.25);
     --empty-text-color: hsl(203, 12%, 75%);
     --dark-border-color: rgba(0, 0, 0, 0.55);
+    --no-query-results: "Query returned no results.";
+    --no-query-results-color: #FC5963;
 }
 
 
@@ -452,6 +441,14 @@ a:hover {
 }
 
 /* ------------------- Query styling ------------------- */
+/* Show empty query message */
+.rm-block-text .rm-reference-main .rm-mentions:empty:after {
+    content: var(--no-query-results);
+    color: var(--no-query-results-color);
+    font-style: italic;
+    padding: var(--s1);
+}
+
 .rm-query {
     border: 0.5px solid #e4e9ec;
     border-radius: 5px;
@@ -484,7 +481,47 @@ a:hover {
     font-family: var(--header-font) !important;
 }
 
+/* RR change: MINIMIZE QUERIES: add any one of the following tags before the beginning of your query (in the same block):
 
+    #min-title = hides the page reference link / page title
+    #min-con = hides the contextual reference information (breadcrumbs)
+    #minimal = hides both the title and the context
+    #min-q = hides the query string, similar to legacy behavior
+    #min-all = hides everything — title, context, and query string
+
+inspired by Matt Goldenberg */
+
+[data-tag="minimal"], 
+[data-tag="minimal"] + .rm-query .rm-title-arrow-wrapper,
+[data-tag="minimal"] + .rm-query .zoom-mentions-view {
+  display:none!important; /* hide page reference (title) and mention context (breadcrumbs) */
+}
+[data-tag="min-title"], [data-tag="min-title"] + .rm-query .rm-title-arrow-wrapper {
+display:none!important; /* hide page reference (title) */
+}
+[data-tag="min-con"], [data-tag="min-con"] + .rm-query .zoom-mentions-view {
+  display:none !important;  /* hide mention context (breadcrumbs) */
+}
+[data-tag="min-q"], 
+[data-tag="min-q"] + .rm-query .rm-query-title {
+  display:none !important;  /* hide the query string */
+}
+[data-tag="min-all"], 
+[data-tag="min-all"] + .rm-query .zoom-mentions-view,
+[data-tag="min-all"] + .rm-query .rm-title-arrow-wrapper,
+[data-tag="min-all"] + .rm-query .rm-query-title {
+  display:none !important;  /* hide everything */
+}
+[data-tag="minimal"] + .rm-query .rm-query-title::after,
+[data-tag="min-title"] + .rm-query .rm-query-title::after,
+[data-tag="min-con"] + .rm-query .rm-query-title::after{
+  content: " #minimal" /* add a tag to the query string to indicate this query has been minimized */
+}
+[data-tag="min-all"] + .rm-query .rm-ref-page-view,
+[data-tag="min-title"] + .rm-query .rm-ref-page-view{   
+    margin: 0px;
+    padding: 0px;
+}
 
 /* ------------------- Bullets ------------------- */
 .controls .simple-bullet-outer .simple-bullet-inner {

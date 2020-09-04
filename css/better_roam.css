@@ -349,9 +349,12 @@ a:hover {
 /* ------------------- Reference Container ------------------- */
 /* Border line bewteen main text and references */
 .rm-reference-container {
-    border-top: 2px solid var(--dark-border-color);
-    padding-top: 15px;
     margin-bottom: 8px;
+}
+
+.rm-reference-container > .flex-h-box {
+    padding-top: 15px;
+    border-top: 1.5px solid var(--dark-border-color);
 }
 
 

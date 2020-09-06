@@ -24,8 +24,6 @@
     --brackets-color: rgba(0, 0, 0, 0.25);
     --empty-text-color: hsl(203, 12%, 75%);
     --dark-border-color: rgba(0, 0, 0, 0.55);
-    --no-query-results: "Query returned no results.";
-    --no-query-results-color: #FC5963;
 }
 
 
@@ -441,13 +439,7 @@ a:hover {
 }
 
 /* ------------------- Query styling ------------------- */
-/* Show empty query message */
-.rm-block-text .rm-reference-main .rm-mentions:empty:after {
-    content: var(--no-query-results);
-    color: var(--no-query-results-color);
-    font-style: italic;
-    padding: var(--s1);
-}
+
 
 .rm-query {
     border: 0.5px solid #e4e9ec;

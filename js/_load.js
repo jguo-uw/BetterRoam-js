@@ -22,3 +22,4 @@ const UserScriptServer =  'https://roam_plus.imfast.io/'
     addCSSToPage( 'myBetterCSS',            UserScriptServer + 'css/better_roam.css'      )
 addModuleToPage( 'SortedAttrTable',       UserScriptServer + 'js/sortAttrTable.js'      )
 addModuleToPage( 'PomoBell',              UserScriptServer + 'js/PomoBell.js'           )
+addModuleToPage( 'PhotoGallery',          UserScriptServer + 'js/PhotoGallery.js'       )

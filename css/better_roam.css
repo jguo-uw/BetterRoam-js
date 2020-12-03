@@ -34,14 +34,14 @@
 }
 
 /* Enable scroll bar */
-div::-webkit-scrollbar {
+/* div::-webkit-scrollbar {
     width: 4px !important;
     height: 4px !important
 }
 
 div::-webkit-scrollbar-thumb {
     background-color: rgb(0 0 0 / 33%) !important;
-}
+} */
 
 /* change body font */
 body,
